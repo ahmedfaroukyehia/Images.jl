@@ -54,6 +54,7 @@ include("edge.jl")
 include("writemime.jl")
 include("corner.jl")
 include("distances.jl")
+include("shape.jl")
 
 
 function precompile()
@@ -233,6 +234,7 @@ export # types
     imlineardiffusion,
     imlog,
     imROF,
+    hough,
 
     #Exposure
     imhist,
@@ -277,7 +279,7 @@ export # types
     boxdiff,
     bilinear_interpolation,
     gaussian_pyramid,
-    
+
     # distances
     hausdorff_distance,
 
@@ -310,6 +312,7 @@ Algorithms:
     - Exposure : `imhist`, `histeq`, `adjust_gamma`, `histmatch`, `imadjustintensity`, `imstretch`, `imcomplement`, `clahe`, `cliphist`
     - Gradients: `backdiffx`, `backdiffy`, `forwarddiffx`, `forwarddiffy`, `imgradients`
     - Edge detection: `imedge`, `imgradients`, `thin_edges`, `magnitude`, `phase`, `magnitudephase`, `orientation`, `canny`
+    - Shape detection: `hough`
     - Corner detection: `imcorner`, `harris`, `shi_tomasi`, `kitchen_rosenfeld`, `meancovs`, `gammacovs`, `fastcorners`
     - Blob detection: `blob_LoG`, `findlocalmaxima`, `findlocalminima`
     - Morphological operations: `dilate`, `erode`, `closing`, `opening`, `tophat`, `bothat`, `morphogradient`, `morpholaplace`
