@@ -299,6 +299,21 @@ view(imgs)
 ```
 ![processing](docs/src/img/mandrill.jpg)
 
+
+### demonstration of shape detection
+
+let's detect the lines:
+```
+using Images, ImageMagick, ImageView
+img = load("box.jpg")
+view(img)
+# Let's call Hough Transform
+resImg, houghMat, lines = hough(img, 2, 55)
+view(houghMat)
+view(resImg)
+```
+![processing](docs/src/img/box.jpg)
+
 # Credits
 
 Elements of this package descend from "image.jl"
