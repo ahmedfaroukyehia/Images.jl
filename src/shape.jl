@@ -1,4 +1,24 @@
 # Hough Transform Implementation for detecting lines
+
+"""
+```
+resImg, houghMat, lines = hough(img, precision = 1.0, minPoints = 500)
+```
+
+Performs Hough transform (line detection) on the input image.
+
+Parameters :
+
+  precision :    precision of the shape parameters (lower is more accurate)
+  minPoints :    the minimum number of edge point detected shape should pass through to be highlited.
+
+Outputs :
+
+  resImg:      orignal image with detected lines highlited
+  houghMat:    black/wight Hough Matrix
+  lines:       prameters of detected lines [slope, offset, pointcount]
+"""
+
 function hough{T}(img::AbstractArray{T, 2}, precision::Number = 1.0, minPoints::Number = 500)
   thetaRange = -89:precision:90
   lenTheta = Float64(length(thetaRange))
