@@ -300,7 +300,7 @@ view(imgs)
 ![processing](docs/src/img/mandrill.jpg)
 
 
-### demonstration of shape detection
+### Demonstration of shape detection
 
 let's detect the lines:
 ```
