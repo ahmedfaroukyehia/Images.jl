@@ -302,17 +302,17 @@ view(imgs)
 
 ### Demonstration of shape detection
 
-let's detect the lines:
+let's detect the lines (box edges):
 ```
 using Images, ImageMagick, ImageView
 img = load("box.jpg")
 view(img)
 # Let's call Hough Transform
-resImg, houghMat, lines = hough(img, 2, 55)
+resImg, houghMat, lines = hough(img, 2, 0.995, 50)
 view(houghMat)
 view(resImg)
 ```
-![processing](docs/src/img/box.jpg)
+![processing](docs/src/img/box.png)
 
 # Credits
 
